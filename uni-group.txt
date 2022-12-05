@@ -23,5 +23,7 @@ FROM `exam_student`
 
 SELECT COUNT(`id`) as `qty_courses`, `degrees`.`department_id` as `id_department`
 FROM `degrees`
+INNER JOIN `departments`
+ON `degrees`.`department_id` = `departments`.`id`
 GROUP BY `degrees`.`department_id`
 --------------------------------------------------------------------------------------------
